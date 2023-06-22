@@ -7,7 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
 {
+    
+    protected $fillable = [
+        'title',
+        'body',
+    ];
+    
     use HasFactory;
+
 //    public function getByLimit(int $limit_count = 10)
     public function getPaginateByLimit(int $limit_count = 10)
     {
